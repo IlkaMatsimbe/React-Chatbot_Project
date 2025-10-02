@@ -1,0 +1,28 @@
+React - e uma biblioteca externa que ajuda a criar websites de forma facil.
+* Onde qualquer pessoa escreve o codigo fora do computador e pode ser processado no website e ser usado.
+
+Existem 3 bibliotecas externas para o nosso projecto:
+* React.js - que sao recursos compartilhados
+* React-dom.js - contem recursos especificos para o website
+* Babel - compilador do JS que traduz outras linguas dentro do JS, 
+  Exemplo: '<script type="text/babel">', ai esta a traduzir todo codigo vindo do JSX
+
+
+Configuracoes
+* Para configurar basta colocar: 'ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');'
+* container e onde ficara todo codigo do react e o render serve pra mostrar alguma coisa na tela, e como se fosse 'console.log'
+* JSX - e o mesmo que JS mas a diferenca e que pode se escrever o codigo html directamente, mas ele so pode ser entendido
+ pelo nosso computador usando a biblioteca Babel que fara entao a traducao no Js normal.
+
+
+ Componentes
+ * Componentes sao pedacos ou partes de um website.
+ * O componente deve iniciar sempre com letra maiuscula, funciona como PascalCase.
+ * Existe outra forma de agrupar elementos sem usar a <div> atraves do Fragment = '<> e </>'
+
+ Props = Propriedades
+ * O paramentro props e um objecto e contem todos atributos dados a um determinado componente.
+ * Faz os componentes serem reutilizaveis
+
+
+ 1:22:54
