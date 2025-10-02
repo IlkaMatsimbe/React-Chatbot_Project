@@ -23,6 +23,7 @@ Configuracoes
  Props = Propriedades
  * O paramentro props e um objecto e contem todos atributos dados a um determinado componente.
  * Faz os componentes serem reutilizaveis
+ * Use a component (App) to create the website
 
 
  1:22:54
