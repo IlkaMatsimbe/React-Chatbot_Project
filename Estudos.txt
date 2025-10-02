@@ -26,4 +26,16 @@ Configuracoes
  * Use a component (App) to create the website
 
 
+ State and Event Handlers (Manipuladores de Eventos)
+ * State faz o website interactivo
+ *  map() serve para criar um novo array a partir de um array existente, 
+    chama uma funcao para cada elemento do array original
+    e cria um novo array com os resultados dessa funcao
+
+Tarefas
+ -Save the data
+ - Gerar o HTML com JS
+
+
+
  1:22:54
