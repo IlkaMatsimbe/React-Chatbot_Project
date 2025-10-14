@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>exercises</title>
+</head>
+<body>
+
+      <div class="js-container"></div>
+
+      <script src="https://unpkg.com/supersimpledev/react.js"></script>
+      <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+      <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+      <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+      <script type="text/babel">
+
+
+      /*function Count() {
+          const [count, setCount] = React.useState(0);
+
+          function increaseCount() {
+            setCount (count + 1); 
+          }*/
+      
+
+          // Exercicio 3a e b
+          /*return (
+              <button
+              onClick = {increaseCount}>
+              Clicked {count} times</button>
+          );*/
+
+
+          // Exercicio 3c
+          /*return (
+          <button onClick={increaseCount}>
+            Clicked {count} {count === 1 ? 'time' : 'times'}
+          </button>
+        );*/
+
+
+
+        // Exercicio 3d to make two counters on the same page that work independently
+        function Counter() {
+        const [count, setCount] = React.useState(0);
+
+        function increaseCount() {
+          setCount(count + 1);
+        }
+
+        return (
+          <button onClick={increaseCount}>
+            Clicked {count} {count === 1 ? 'time' : 'times'}
+          </button>
+        );
+      }
+
+      function App() {
+        return (
+          <>
+            <Counter />
+            <Counter />
+          </>
+        )
+      }
+
+    
+
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
+      

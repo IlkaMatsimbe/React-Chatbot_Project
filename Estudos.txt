@@ -1,5 +1,7 @@
 React - e uma biblioteca externa que ajuda a criar websites de forma facil.
 * Onde qualquer pessoa escreve o codigo fora do computador e pode ser processado no website e ser usado.
+* Nao modifica se os dados directamente, cria-se um copia dos dados. 
+  Exemplo: ... (ou podemos chamar de Spread Operator), leva o valor para um novo array e copia o dado dentro dele.
 
 Existem 3 bibliotecas externas para o nosso projecto:
 * React.js - que sao recursos compartilhados
@@ -27,14 +29,24 @@ Configuracoes
 
 
  State and Event Handlers (Manipuladores de Eventos)
- * State faz o website interactivo
+ * State faz o website interactivo, e igual dizer que sao dados que estao connectados ao HTML
  *  map() serve para criar um novo array a partir de um array existente, 
     chama uma funcao para cada elemento do array original
     e cria um novo array com os resultados dessa funcao
+ *   salva dados quer mudam ao longo do tempo, exeemplo: um text no textbox 
+ * State so atualiza depois de todo o codigo estiver concluido
+
+Event Handlers
+* Evento e um objceto que contem detalhes de um evento ou change.
+*Event Handler corre a funcao quando nos interagimos com o website
+* onClick e um Evento
+* crypto.randomUUID() - codigo JS que cria um unico Id em String
+* onChange - corre a funcao quando trocamos o texto dentro de um <input>
 
 Tarefas
  -Save the data
  - Gerar o HTML com JS
+ - Make a website interactive
 
 
 

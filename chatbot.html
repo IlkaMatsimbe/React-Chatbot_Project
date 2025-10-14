@@ -9,39 +9,86 @@
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
 
-      function ChatInput() {
-        return (
+
+
+
+    function ChatInput({chatMessages, setChatMessages}) {
+        const [inputText,setInputText] = React.useState('');
+        function saveInputText(event) {
+          setInputText (event.target.value);
+        }
+
+
+
+        // send message to chatbot
+      function sendMessage () {
+
+        const newChatMessages = [
+            ...chatMessages,
+            {
+              message: inputText,
+              sender: 'user',
+              id: crypto.randomUUID()
+            }
+          ];
+
+          setChatMessages (newChatMessages);
+
+
+          // get response from chatbot
+          const response = Chatbot.getResponse(inputText);
+          setChatMessages ([
+            ...newChatMessages,
+            {
+              message: response,
+              sender: 'robot',
+              id: crypto.randomUUID()
+            }
+          ]);
+
+
+
+          setInputText ('');
+        }
+  
+        
+       return (
+        
           <>
             <input 
               placeholder="Send a message to Chatbot" 
               size="30"
+              onChange = {saveInputText}
+              value = {inputText}
             />
-            <button>Send</button>
+            <button
+            onClick = {sendMessage}
+            >Send</button>
           </>
-      );
+        );
       }
+
 
       function ChatMessage({message, sender}) {
         /*const message = props.message;
-        const sender = props.sender;*/
-        // const {message, sender} = props;
+          const sender = props.sender;*/
+          // const {message, sender} = props;
 
-
-
-        /*
-        if (sender === 'robot') {
-          return (
-            <div>
-              <img src="robot.png" width= "50"/>
-              {message}
-            </div>
-          );
-        }
-      */
+          /*
+          if (sender === 'robot') {
+            return (
+              <div>
+                <img src="robot.png" width= "50"/>
+                {message}
+              </div>
+            );
+          }
+        */
 
 
         return (
@@ -53,14 +100,32 @@
 
             { sender === 'user' && (
               <img src="user.png" width= "50"/>)}
-          </div>
-          
+          </div>   
         );
       } 
 
 
-      function ChatMessages () {
-        const ChatMessages = [{
+      //funcao para mostrar todas as mensagens
+      function ChatMessages ({chatMessages}) {
+          return (
+            <>
+              {chatMessages.map((chatMessage) => {
+                return (
+                  <ChatMessage 
+                    message={chatMessage.message} 
+                    sender={chatMessage.sender}
+                    key = {chatMessage.id}
+                  />
+                ); 
+            })}
+          </>
+        );
+      }
+
+
+      function App() { 
+        const [chatMessages, setChatMessages] = React.useState ([{
+
           message: 'hello chatbot', 
           sender: 'user',
           id: 'id1'
@@ -77,33 +142,21 @@
           message: 'Sure! Today is October 2', 
           sender: 'robot',
           id: 'id4'
-        }];
+        }]);
+        //const [chatMessages, setChatMessages] = array; 
+        //const chatMessages = array[0]; // os state com dados correntes
+        //const setChatMessages =  array[1]; // funcao para atualizar o state
 
 
         return (
           <>
-            {ChatMessages.map((ChatMessage) => {
-              return (
-                <ChatMessage 
-                  message={ChatMessage.message} 
-                  sender={ChatMessage.sender}
-                  key = {ChatMessage.id}
-
-                />
-              );
-            
-           })}
-         </>
-      );
-
-    }
-
-      function App() {
-        
-        return (
-          <>
-            <ChatInput/>
-            <ChatMessages/>
+            <ChatInput
+            chatMessages = {chatMessages}
+            setChatMessages = {setChatMessages}
+            />
+            <ChatMessages
+            chatMessages = {chatMessages}
+            />
           </>
         );
       }
