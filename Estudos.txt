@@ -56,6 +56,11 @@ Tarefas
  - permite inserir recursos do React em nosso componente e todo gancho comeca sempre com "use".
  Ex: React.useState()...
  - useEffect: permite executar o codigo depois que o componente e criado ou atualizado
+ - useRef - permite salvbar automaticamente um elemento HTML do componente. Ref = container
+            com uma caracteristica especial do React
+ - ScrollTop: quao longe do topo devemos rolar.
+ - ScrollHeight: a altura total do elemento.
+
 
 
 
