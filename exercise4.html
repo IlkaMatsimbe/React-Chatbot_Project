@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<head>
+  <title>exercises</title>
+
+  <style>
+    .button-login {
+       background-color: rgb(0, 123, 255);
+        color: white;
+        margin-left: 7px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    
+
+      .login-input {
+         padding: 10px 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border-width: 1px;
+        width: 200px;
+
+      }
+
+
+       body {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .counter-button {
+        background-color: rgb(25, 135, 84);
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .counter-container {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgb(200, 200, 200);
+        align-items: center;
+      }
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+      <div class="js-container"></div>
+
+      <script src="https://unpkg.com/supersimpledev/react.js"></script>
+      <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+      <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+      <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+      <script type="text/babel">
+
+
+
+
+      //EXERCICIO 4D
+      /*function LoginForm() {
+          return (
+              <>
+                <div>
+                  <input placeholder="Email" className="login-input"/>
+                </div>
+
+                <div className="input-password">
+                  <input placeholder="Password" type="password" className="login-input" />
+                </div>
+
+                <button className= "button-login">Login</button>
+                <button className= "button-login">Sign up</button>
+
+
+              </>
+          );
+      }*/
+  
+      function App() {
+        //EXERCICIO 4D
+       /* return (
+          <div>
+            <h1>Hello, welcome to my mini website</h1>
+            <LoginForm />
+          </div>
+      );*/
+      
+
+
+
+        /*
+        //Exercicio 4a, b e c
+        const [isButtonOn, setIsButtonOn] = React.useState(true);
+
+        function switchButtonOn() {
+          // Another solution is: setIsButtonOn(!isButtonOn);
+          if (isButtonOn) {
+            setIsButtonOn(false);
+          } else {
+            setIsButtonOn(true);
+          }
+        }
+
+         return (
+          <button
+            className={isButtonOn ? 'button' : 'buttonRed'}
+            onClick={switchButtonOn}
+          >
+            {isButtonOn ? 'ON' : 'OFF'}
+          </button>
+        );
+        */
+
+
+
+
+
+        //EXERCICIO 4d e E
+        /*const [showPasswordVisible, setIsPasswordVisible] = React.useState (false);
+        function switchPassword(){
+          if (showPasswordVisible) {
+            setIsPasswordVisible (false);
+          } else {
+            setIsPasswordVisible (true);
+          }
+        }
+
+        return (
+          <div>
+            <input 
+              placeholder="Password" 
+              type={showPasswordVisible ? 'text' : 'password'} 
+              className="login-input"
+            />
+            <button 
+              onClick={switchPassword}
+              className="button-login"
+            >
+              {showPasswordVisible ? 'Hide Password' : 'Show Password'}
+            </button>
+          </div>
+        );*/
+
+
+
+
+
+
+        //Exercicio 4f e g
+        /*const [time, setTime] = React.useState(
+          dayjs().format('HH:mm:ss')
+        );
+
+        React.useEffect(() => {
+          setInterval(() => {
+            console.log('run code');
+
+            setTime(dayjs().format('HH:mm:ss'));
+          }, 1000);
+
+
+
+        // Important: make sure to give React.useEffect()
+        // a dependency array of [] so it only runs once!
+        }, []);
+
+        return (
+          <p>Current time: {time}</p>   
+        );*/
+
+
+
+
+        //Exercicio 4h
+        const [count, setCount] = React.useState(0);
+        const buttonRef = React.useRef();
+
+        function increaseCount() {
+          setCount(count + 1);
+        }
+
+        function resetCount() {
+          setCount(0);
+        }
+
+        function autoClick() {
+          setInterval(() => {
+            const buttonElem = buttonRef.current;
+            if (buttonElem) {
+              buttonElem.click();
+            }
+          }, 1000);
+        }
+
+        return (
+          
+         <div className="counter-container">
+
+            <button
+              onClick={increaseCount}
+              ref={buttonRef}
+              className="counter-button"
+
+            >
+              Clicked {count} {count === 1 ? 'time' : 'times'}
+            </button>
+            <button onClick={resetCount} className="counter-button">
+              Reset
+            </button>
+            <button onClick={autoClick} className="counter-button">
+              Auto Click
+            </button>
+          </div>
+        );
+
+
+
+      }
+      
+        
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App />);
+
+      
+    </script>
+  </body>
+</html>
+      

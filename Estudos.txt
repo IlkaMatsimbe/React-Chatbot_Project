@@ -61,6 +61,16 @@ Tarefas
  - ScrollTop: quao longe do topo devemos rolar.
  - ScrollHeight: a altura total do elemento.
 
+ Proper React setup (configuracao adequada do React)
+ * mkdir - cria o diretorio
+
+
+ Nodejs
+ - o  comando node permite executar codigo JS fora do navegador
+ - npm (node package manager): e como se fosse uma biblioteca externa ou pacotes
+ - react-course> creat-vite; ajuda a configurar um novo projecto React
+
+
 
 
 
