@@ -68,10 +68,27 @@ Tarefas
  Nodejs
  - o  comando node permite executar codigo JS fora do navegador
  - npm (node package manager): e como se fosse uma biblioteca externa ou pacotes
- - react-course> creat-vite; ajuda a configurar um novo projecto React
+ - react-course> creat-vite; ajuda a configurar um novo projecto React, pode ser executado assim 
+   na linha do comando 'npx create-vite' x=execute. Se colocarmos no final do comando  o '@', signfica
+   que vamos usar uma versao especifica
+ - o npm run dev: inicara nosso novo React site 
+ - vite e uma ferramenta usada para configurar e construir o nosso projecto no website, ele tambem
+   cria um servidor que coloca o nosso website um uma URL
+
+ Pastas
+ * o node_modules - e onde o npm instala todos pacotes
+ * src - pasta de origem que contem o codigo para o website
+ * assets - contem imagens que queremos exibir no website
+ * Public - contem arquivos que devem estar disponiveis ao publico
+ * eslint - destaca problemas no codigo JS
 
 
 
 
 
- 3:30:20
+
+SHIFT + TAB = mover codigo a esquerda
+TAB = mover codigo a direita
+
+
+ 4:06:35
