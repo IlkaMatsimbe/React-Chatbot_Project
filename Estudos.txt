@@ -84,11 +84,16 @@ Tarefas
 
 
 
+Routing, Git the Ecommerce Project
 
-
+Para iniciar um novo projecto com o React usando o Vite, basta digitar:
+1- 'npx create-vite@6.5.0';
+2- deve ir ao caminho do projecto: 'cd ecommerce-project' ;
+3- instalar todos pacotes: npm install;
+4- correr o projecto: 'npm run dev';
 
 SHIFT + TAB = mover codigo a esquerda
 TAB = mover codigo a direita
 
 
- 4:06:35
+ 5:00:45
