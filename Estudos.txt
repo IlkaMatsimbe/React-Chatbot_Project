@@ -92,6 +92,13 @@ Para iniciar um novo projecto com o React usando o Vite, basta digitar:
 3- instalar todos pacotes: npm install;
 4- correr o projecto: 'npm run dev';
 
+
+Routing 
+* Cria multiplas paginas no react usando 1 html file.
+ <Routes></Routes> - diz ao react todas as paginas que estao no nosso website.
+
+
+
 SHIFT + TAB = mover codigo a esquerda
 TAB = mover codigo a direita
 
