@@ -23,9 +23,9 @@ export function CheckoutPage() {
 
           <div className="checkout-header-right-section">
             <img src="images/icons/checkout-lock-icon.png" />
-          </div>
+          </div> 
         </div>
-      </div>
+      </div> 
 
       <div className="checkout-page">
         <div className="page-title">Review your order</div>
