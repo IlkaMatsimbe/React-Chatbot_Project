@@ -96,11 +96,11 @@ Para iniciar um novo projecto com o React usando o Vite, basta digitar:
 Routing 
 * Cria multiplas paginas no react usando 1 html file.
  <Routes></Routes> - diz ao react todas as paginas que estao no nosso website.
-
-
+*Links - vai pra outra pagina sem recarregar e para usar basta repetir os elementos do link ou um likn com esse componente. 
+Troquei o <a> element por <Link> component e trocar href por 'to'
 
 SHIFT + TAB = mover codigo a esquerda
 TAB = mover codigo a direita
 
 
- 5:00:45
+ 6:02:00
