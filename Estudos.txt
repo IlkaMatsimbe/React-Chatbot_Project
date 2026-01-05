@@ -99,6 +99,8 @@ Routing
 *Links - vai pra outra pagina sem recarregar e para usar basta repetir os elementos do link ou um likn com esse componente. 
 Troquei o <a> element por <Link> component e trocar href por 'to'
 
+key={} - ajuda ao React a manter mudancas de trocas num array
+
 SHIFT + TAB = mover codigo a esquerda
 TAB = mover codigo a direita
 
