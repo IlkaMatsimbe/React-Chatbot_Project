@@ -5,7 +5,6 @@ import './HomePage.css';
 export function HomePage() {
   return (
 
-
     <>
       <Header />
       <title>Ecommerce Project</title>
@@ -66,7 +65,6 @@ export function HomePage() {
               </div>
             )
           })}
-        
         </div>
       </div>
 

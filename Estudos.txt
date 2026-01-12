@@ -101,6 +101,9 @@ Troquei o <a> element por <Link> component e trocar href por 'to'
 
 key={} - ajuda ao React a manter mudancas de trocas num array
 
+*Os dados dos produtos sao armazenados no data center
+* O backend faz a gestao de todos os dados 
+
 SHIFT + TAB = mover codigo a esquerda
 TAB = mover codigo a direita
 
