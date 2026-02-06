@@ -112,6 +112,8 @@ Data Fetching (Busca de Dados) - buscar os dados do backend usando o codigo.
 * Promise - tem um metodo .then() que espera pela resposta
 * .json - danos os dados anexados a resposta
 *axios - uma forma de fazer requisicoes para o backend
+* usar o [] dentro do useEffect, signifca dependencia de array que apenas faz com que o array 
+  percorra uma vez apenas dnetro do useEffect
 
 "Deployment on the module"
 We need to modify all components that make part of the system
