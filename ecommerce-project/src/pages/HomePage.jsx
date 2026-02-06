@@ -1,10 +1,17 @@
+import axios from 'axios';
 import { Header } from '../components/Header.jsx';
 import { products } from '../../starting-code/data/products';
 import './HomePage.css';
 
 export function HomePage() {
-  return (
+  axios.get('http://localhost:3000/api/products')
+  .then((response) => {
+    console.log(response.data);
+    });
 
+   
+
+  return (
     <>
       <Header />
       <title>Ecommerce Project</title>
@@ -66,6 +73,8 @@ export function HomePage() {
             )
           })}
         </div>
+
+
       </div>
 
     </>
