@@ -1,29 +1,23 @@
+
+import './HomePage.css';
+
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Header } from '../components/Header.jsx';
 import './HomePage.css';
 
 
-export function HomePage() {
+export function HomePage({cart}) {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
 
 
   useEffect(() => {
       axios.get('/api/products')
         .then((response) => {
-          setProducts(response.data);
+           setProducts(response.data);
         });
 
-      axios.get('api/cart-items')
-      .then((response) => {
-        setCart(response.data); });
-
   }, []);
-
-
-
-
 
   return (
     <>
@@ -48,7 +42,7 @@ export function HomePage() {
 
                 <div className="product-rating-container">
                   <img className="product-rating-stars"
-                    src= {`images/ratings/rating-${product.rating.stars}.png`} />
+                    src={`/images/ratings/rating-${product.rating.stars}.png`}/>
                   <div className="product-rating-count link-primary">
                     {product.rating.count}
                   </div>
@@ -77,7 +71,7 @@ export function HomePage() {
                 <div className="product-spacer"></div>
 
                 <div className="added-to-cart">
-                  <img src="images/icons/checkmark.png" />
+                  <img src="/images/icons/checkmark.png" />
                   Added
                 </div>
 
