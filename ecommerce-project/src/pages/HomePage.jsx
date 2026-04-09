@@ -1,10 +1,9 @@
 
 import './HomePage.css';
-
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Header } from '../components/Header.jsx';
-import './HomePage.css';
+import { formatMoney } from '../utils/money.js';
 
 
 export function HomePage({cart}) {
@@ -29,6 +28,9 @@ export function HomePage({cart}) {
       <div className="home-page">
         <div className="products-grid">
           {products.map((product) => {
+
+              const rating = Math.round(product.rating.stars * 2) * 5;
+
             return (
               <div key={product.id} className="product-container">
                 <div className="product-image-container">
@@ -41,16 +43,17 @@ export function HomePage({cart}) {
                 </div>
 
                 <div className="product-rating-container">
-                  <img className="product-rating-stars"
-                    src={`/images/ratings/rating-${product.rating.stars}.png`}/>
+                <img
+                  className="product-rating-stars"
+                    src={`/images/ratings/rating-${rating}.png`}
+                    alt="rating"/>
                   <div className="product-rating-count link-primary">
                     {product.rating.count}
                   </div>
                 </div>
 
                 <div className="product-price">
-                  ${(product.priceCents / 100).toFixed(2)}
-                  
+                  {formatMoney(product.priceCents)}                  
                 </div>
 
                 <div className="product-quantity-container">
