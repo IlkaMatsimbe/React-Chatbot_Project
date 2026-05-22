@@ -126,9 +126,17 @@ We need to modify all components that make part of the system
   Query parameter (Paramentro de consulta) - da nos uma informacam adicional para as requisicoes
 
 
+
+
+Mutacao de Dados(Date Mutation)
+* Atualiza os dados no backend
+
+
+
+
 SHIFT + TAB = mover codigo a esquerda
 TAB = mover codigo a direita
 
 
 
-6:50:00
+8:19:00
